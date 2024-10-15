@@ -1,0 +1,79 @@
+% PACKAGES
+%% document formatting
+\usepackage[default]{sourcesanspro}
+\usepackage[nottoc,numbib]{tocbibind}
+
+%% languages
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+
+%% hyperlinks
+\usepackage{hyperref}
+\usepackage{url}
+
+%% graphics
+\usepackage{graphicx}
+\usepackage{geometry}
+
+%% citation
+\usepackage{acronym}
+\usepackage[style=ieee]{biblatex}
+\usepackage{floatrow}
+
+%% code listings
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+% CONFIGURATION
+%% Variables
+\def  \authorName {Lukas Reinke}
+\def  \MatNr {142878}
+
+% indent
+\setlength{\parindent}{0pt}
+\hfuzz=10pt 
+
+%% sources
+\addbibresource{sources.bib}
+
+%% document link format
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+
+%% list of figures
+\renewcommand{\listoffigures}{\begingroup
+\tocsection
+\tocfile{\listfigurename}{lof}
+\endgroup}
+
+%% listing style
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}

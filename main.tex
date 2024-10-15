@@ -1,0 +1,27 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{subfiles}
+
+\input{chapters/config/00.1_config}
+\begin{document}
+    \input{chapters/config/00.2_titlepage}
+    \input{chapters/config/00.3-eidesstatt.tex}
+    \input{chapters/00.4_abstract.tex}
+    \input{chapters/config/00.5_preamble.tex}
+
+    %chapters
+    \section{Einleitung}
+    \input{./chapters/01.0_Einleitung.tex}
+
+    % CONTENT
+
+    \section{Fazit}
+    \input{./chapters/05.0_Fazit.tex}
+    \pagebreak
+
+    \input{chapters/config/00.6_after.tex}
+    \pagebreak
+
+    %% APPENDIX
+    \appendix
+
+\end{document}
