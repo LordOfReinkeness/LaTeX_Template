@@ -77,3 +77,18 @@
 }
 
 \lstset{style=mystyle}
+
+% tables over multiple pages
+\usepackage{longtable}
+\usepackage{array}
+
+% define tablewidth with variables
+\usepackage{ragged2e}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newlength{\totaltablewidth}
+\setlength{\totaltablewidth}{\dimexpr \textwidth - 8\tabcolsep\relax}
+
+
+% use colors in the text
+\usepackage[dvipsnames]{xcolor}
+\usepackage{showframe}
